@@ -2,7 +2,8 @@
 
 Wersje skompilowane programu LiDAR Toolbox (klasyfikacja chmur punktów ALS dla linii
 elektroenergetycznych). Repozytorium zawiera tylko pliki wydań, bez kodu źródłowego.
-Do uruchomienia programu potrzebny jest klucz licencji.
+Do uruchomienia programu potrzebny jest klucz licencji. Modele ML nie są częścią wydań —
+są dostarczane osobno razem z licencją.
 
 ## Aktualizacja
 
@@ -11,10 +12,11 @@ i wybrać „Pobierz i zainstaluj”. Pobierane są tylko zmienione części pro
 
 ## Nowa instalacja
 
-1. Pobierz z [najnowszego wydania](../../releases/latest) wszystkie pliki `app-…`, `ml-…` i `models-…`.
+1. Pobierz z [najnowszego wydania](../../releases/latest) wszystkie pliki `app-…` i `ml-…`.
 2. Jeśli paczka ma części (`.zip.001`, `.zip.002`), połącz je w jeden plik `.zip`, np. w wierszu poleceń:
    `copy /b ml-WERSJA.zip.001 + ml-WERSJA.zip.002 ml-WERSJA.zip`.
-3. Rozpakuj wszystkie paczki do jednego folderu, np. `C:\LiDAR_Toolbox`.
+3. Rozpakuj obie paczki do jednego folderu, np. `C:\LiDAR_Toolbox`.
+   Modele ML dostajesz osobno razem z licencją: wgraj folder `models` do folderu programu.
 4. Uruchom `LiDAR_Toolbox.exe` i wpisz klucz licencji.
 
 Szczegóły (sterownik NVIDIA, ustawienia Windows, pierwsze uruchomienie): `Instrukcja_instalacji.pdf`
@@ -26,7 +28,6 @@ w folderze programu.
 |---|---|
 | `app-<wersja>.zip` | program |
 | `ml-<wersja>.zip[.NNN]` | środowisko ML (torch, CUDA); zmienia się rzadko |
-| `models-<wersja>.zip` | modele dostarczane z programem |
 | `manifest.json`, `manifest.json.sig` | opis wersji i podpis używany przez aktualizację w programie |
 
 Paczka bez zmian względem poprzedniej wersji nie jest wysyłana ponownie. Wtedy jej plik jest w jednym
